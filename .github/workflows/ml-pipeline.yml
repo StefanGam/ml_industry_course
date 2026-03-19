@@ -44,14 +44,14 @@ name: ML Pipeline
 # fresh data (uncomment the block below). With our static dataset there's
 # no new data arriving, so scheduled runs would just repeat the same result.
 #
-schedule:
-  cron: "0 2 * * *"
-#on:
-#  push:
-#    paths:
-#      - "day4/**"
-#      - ".github/workflows/ml-pipeline.yml"
-#  workflow_dispatch:
+#schedule:
+#  cron: "0 2 * * *"
+on:
+  push:
+    paths:
+      - "day4/**"
+      - ".github/workflows/ml-pipeline.yml"
+  workflow_dispatch:
 
 jobs:
   ml-pipeline:
